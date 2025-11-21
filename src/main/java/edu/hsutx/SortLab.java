@@ -65,6 +65,10 @@ public class SortLab {
     // implementation of Radix Sort
     public static void radixSort(int[] array) {
         // TODO - Implement Radix Sort
+        if (array == null || array.length == 0) {
+            return;
+        }
+
         int max = findMax(array);
 
         int radix = 1;
@@ -164,9 +168,9 @@ public class SortLab {
         //    will demonstrate that sort outperforming the other options.
         int[][] paramList = {
                 // max int is 2147483647
-                {1000, 1_999_999_999},
-                {100000, 1000},
-                {1000000, 100000}
+                {1000000, 10000000},
+                {10000, 1000000},
+                {50000000, 100000000}
         };
 
         int count=1;
